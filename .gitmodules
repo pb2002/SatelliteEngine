@@ -1,0 +1,6 @@
+[submodule "Satellite/vendor/glfw"]
+	path = Satellite/vendor/glfw
+	url = https://github.com/TheCherno/GLFW
+[submodule "Satellite/vendor/spdlog"]
+	path = Satellite/vendor/spdlog
+	url = https://github.com/gabime/spdlog
