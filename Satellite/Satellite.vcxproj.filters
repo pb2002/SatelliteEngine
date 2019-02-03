@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Satellite">
+      <UniqueIdentifier>{8CC34210-F82D-F786-416C-A82CAD15D5DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Satellite\events">
+      <UniqueIdentifier>{108E4461-FC86-63B3-25B9-4838111143BF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Satellite.h" />
+    <ClInclude Include="src\Satellite\application.h">
+      <Filter>Satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Satellite\core.h">
+      <Filter>Satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Satellite\entryPoint.h">
+      <Filter>Satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Satellite\events\appEvent.h">
+      <Filter>Satellite\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Satellite\events\event.h">
+      <Filter>Satellite\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Satellite\events\keyEvent.h">
+      <Filter>Satellite\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Satellite\events\mouseEvent.h">
+      <Filter>Satellite\events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Satellite\log.h">
+      <Filter>Satellite</Filter>
+    </ClInclude>
+    <ClInclude Include="src\satpch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Satellite\application.cpp">
+      <Filter>Satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Satellite\log.cpp">
+      <Filter>Satellite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\satpch.cpp" />
+  </ItemGroup>
+</Project>
