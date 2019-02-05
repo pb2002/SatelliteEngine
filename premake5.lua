@@ -8,6 +8,7 @@ workspace "Satellite"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+include "Satellite/vendor/glfw"
 project "Satellite"
 	location "Satellite"
 	kind "SharedLib"
@@ -29,7 +30,10 @@ project "Satellite"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/vendor/glfw/include"
 	}
-
+	links{
+		"GLFW",
+		"opengl32.lib"
+	}
 	filter "system:windows"
 		cppdialect "C++17"
 		staticruntime "On"

@@ -8,6 +8,7 @@
 namespace Satellite {
 	Application::Application() {}
 	Application::~Application() {}
+	
 
 	void Application::run() {
 		Satellite::Log::init();
@@ -19,7 +20,7 @@ namespace Satellite {
 		SAT_CORE_CRIT("critical format [white on red]");
 		SAT_CORE_TRACE("trace format [white on black]");
 		SAT_INFO("Greetings from Client Logger!");
-
+		
 		Satellite::WindowResizeEvent e(1280, 720);
 		SAT_TRACE(e);
 		while (true);
