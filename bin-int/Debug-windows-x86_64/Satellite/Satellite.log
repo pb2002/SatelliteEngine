@@ -1,5 +1,15 @@
-﻿  application.cpp
-  WindowsWindow.cpp
+﻿  windowsWindow.cpp
+  application.cpp
+c:\dev\projects\vs\cpp\satellite\satellite\src\satellite\application.h(15): warning C4251: 'Satellite::Application::m_Window': class 'std::unique_ptr<Satellite::Window,std::default_delete<_Ty>>' needs to have dll-interface to be used by clients of class 'Satellite::Application'
+          with
+          [
+              _Ty=Satellite::Window
+          ]
+  c:\dev\projects\vs\cpp\satellite\satellite\src\satellite\application.h(15): note: see declaration of 'std::unique_ptr<Satellite::Window,std::default_delete<_Ty>>'
+          with
+          [
+              _Ty=Satellite::Window
+          ]
+c:\dev\projects\vs\cpp\satellite\satellite\src\satellite\application.cpp(27): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
   Generating Code...
-     Creating library ..\bin\Debug-windows-x86_64\Satellite\Satellite.lib and object ..\bin\Debug-windows-x86_64\Satellite\Satellite.exp
   Satellite.vcxproj -> C:\dev\projects\vs\cpp\Satellite\Satellite\..\bin\Debug-windows-x86_64\Satellite\Satellite.dll

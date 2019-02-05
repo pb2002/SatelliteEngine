@@ -34,7 +34,7 @@ namespace Satellite {
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
 
-		virtual ~Window();
+		virtual ~Window() {}
 
 		virtual void onUpdate() = 0; // called every update
 

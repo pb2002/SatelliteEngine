@@ -3,5 +3,14 @@ c:\dev\projects\vs\cpp\satellite\satellite\src\satellite\log.h(17): warning C425
   c:\dev\projects\vs\cpp\satellite\sandbox\vendor\spdlog\include\spdlog\logger.h(163): note: see declaration of 'std::shared_ptr<spdlog::logger>'
 c:\dev\projects\vs\cpp\satellite\satellite\src\satellite\log.h(18): warning C4251: 'Satellite::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Satellite::Log'
   c:\dev\projects\vs\cpp\satellite\sandbox\vendor\spdlog\include\spdlog\logger.h(163): note: see declaration of 'std::shared_ptr<spdlog::logger>'
-  LINK : ..\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe not found or not built by the last incremental link; performing full link
+c:\dev\projects\vs\cpp\satellite\satellite\src\satellite\application.h(15): warning C4251: 'Satellite::Application::m_Window': class 'std::unique_ptr<Satellite::Window,std::default_delete<_Ty>>' needs to have dll-interface to be used by clients of class 'Satellite::Application'
+          with
+          [
+              _Ty=Satellite::Window
+          ]
+  c:\dev\projects\vs\cpp\satellite\satellite\src\satellite\application.h(15): note: see declaration of 'std::unique_ptr<Satellite::Window,std::default_delete<_Ty>>'
+          with
+          [
+              _Ty=Satellite::Window
+          ]
   Sandbox.vcxproj -> C:\dev\projects\vs\cpp\Satellite\Sandbox\..\bin\Debug-windows-x86_64\Sandbox\Sandbox.exe
