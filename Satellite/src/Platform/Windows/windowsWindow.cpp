@@ -42,7 +42,7 @@ namespace Satellite {
 			s_GLFWInitialized = true;
 		}
 		m_Window = glfwCreateWindow((int)props.width, (int)props.height, props.title.c_str(), nullptr, nullptr);
-		if (m_Window) {
+		if (!m_Window) {
 			SAT_CORE_CRIT("(at {0}) Failed to create window: m_Window was null.", __FUNCTION__);
 		}
 		

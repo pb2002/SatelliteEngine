@@ -3,3 +3,12 @@
 ################################################################################
 
 /.vs/Satellite/v15
+/Satellite.sln
+/bin
+/bin-int
+/Satellite/Satellite.vcxproj
+/Satellite/Satellite.vcxproj.filters
+/Satellite/Satellite.vcxproj.user
+/Sandbox/Sandbox.vcxproj
+/Sandbox/Sandbox.vcxproj.filters
+/Sandbox/Sandbox.vcxproj.user
