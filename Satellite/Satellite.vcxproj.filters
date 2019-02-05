@@ -35,6 +35,8 @@
       <Filter>Satellite</Filter>
     </ClInclude>
     <ClInclude Include="src\satpch.h" />
+    <ClInclude Include="src\Platform\Windows\windowsWindow.h" />
+    <ClInclude Include="src\Satellite\window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Satellite\application.cpp">
@@ -44,5 +46,6 @@
       <Filter>Satellite</Filter>
     </ClCompile>
     <ClCompile Include="src\satpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\windowsWindow.cpp" />
   </ItemGroup>
 </Project>

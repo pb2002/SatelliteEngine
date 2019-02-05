@@ -159,6 +159,8 @@
     <ClInclude Include="src\Satellite\events\mouseEvent.h" />
     <ClInclude Include="src\Satellite\log.h" />
     <ClInclude Include="src\satpch.h" />
+    <ClInclude Include="src\Satellite\window.h" />
+    <ClInclude Include="src\Platform\Windows\windowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Satellite\application.cpp" />
@@ -166,6 +168,7 @@
     <ClCompile Include="src\satpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\windowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\glfw\GLFW.vcxproj">

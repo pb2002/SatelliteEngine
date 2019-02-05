@@ -1,2 +1,5 @@
-﻿     Creating library ..\bin\Debug-windows-x86_64\Satellite\Satellite.lib and object ..\bin\Debug-windows-x86_64\Satellite\Satellite.exp
+﻿  application.cpp
+  WindowsWindow.cpp
+  Generating Code...
+     Creating library ..\bin\Debug-windows-x86_64\Satellite\Satellite.lib and object ..\bin\Debug-windows-x86_64\Satellite\Satellite.exp
   Satellite.vcxproj -> C:\dev\projects\vs\cpp\Satellite\Satellite\..\bin\Debug-windows-x86_64\Satellite\Satellite.dll
