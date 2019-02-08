@@ -1,6 +1,5 @@
 #pragma once
 #include "satpch.h"
-
 namespace Satellite {
 #define EVENT_CLASS_TYPE(type) static EventType getStaticType() { return EventType::##type; }\
 							   virtual EventType getEventType() const override { return getStaticType(); }\
