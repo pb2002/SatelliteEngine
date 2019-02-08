@@ -8,7 +8,10 @@ workspace "Satellite"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
 include "Satellite/vendor/glfw"
+include "Satellite/vendor/glad"
+
 project "Satellite"
 	location "Satellite"
 	kind "SharedLib"
@@ -28,10 +31,12 @@ project "Satellite"
 	includedirs{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/vendor/glfw/include"
+		"Satellite/vendor/glfw/include",
+		"Satellite/vendor/glad/include"
 	}
 	links{
 		"GLFW",
+		"GLAD",
 		"opengl32.lib"
 	}
 	filter "system:windows"
@@ -50,12 +55,15 @@ project "Satellite"
 	filter "configurations:Debug"
 		defines "SAT_DEBUG"
 		symbols "On"
+		buildoptions "/MDd"
 	filter "configurations:Release"
 		defines "SAT_RELEASE"
 		optimize "On"
+		buildoptions "/MD"
 	filter "configurations:Dist"
 		defines "SAT_DIST"
 		optimize "On"
+		buildoptions "/MD"
 
 project "Sandbox"
 	location "Sandbox"

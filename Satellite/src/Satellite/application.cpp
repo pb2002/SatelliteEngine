@@ -22,8 +22,17 @@ namespace Satellite {
 		SAT_CORE_TRACE("(at {0}) Starting window update loop.", __FUNCTION__);
 
 		while (m_Running) {
+
+			// Clear screen (cornflower blue [0.2,0.5,1.0])
 			glClearColor(0.2, 0.5, 1.0, 1.0);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			// Update layers ----------------
+			for (Layer* layer : m_LayerStack)
+				layer->onUpdate();			
+			// ------------------------------
+
+			// Update window
 			m_Window->onUpdate();
 		}
 	}
