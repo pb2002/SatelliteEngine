@@ -46,7 +46,8 @@ project "Satellite"
 
 		defines{
 			"SAT_PLATFORM_WINDOWS",
-			"SAT_BUILD_DLL"
+			"SAT_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		postbuildcommands{			
 			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox/") 			 
@@ -55,15 +56,12 @@ project "Satellite"
 	filter "configurations:Debug"
 		defines "SAT_DEBUG"
 		symbols "On"
-		buildoptions "/MDd"
 	filter "configurations:Release"
 		defines "SAT_RELEASE"
 		optimize "On"
-		buildoptions "/MD"
 	filter "configurations:Dist"
 		defines "SAT_DIST"
 		optimize "On"
-		buildoptions "/MD"
 
 project "Sandbox"
 	location "Sandbox"

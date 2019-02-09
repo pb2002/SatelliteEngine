@@ -1,5 +1,7 @@
 #pragma once
 #include "satpch.h"
+#include "Satellite/core.h"
+
 namespace Satellite {
 #define EVENT_CLASS_TYPE(type) static EventType getStaticType() { return EventType::##type; }\
 							   virtual EventType getEventType() const override { return getStaticType(); }\
@@ -37,7 +39,7 @@ namespace Satellite {
 		virtual EventType getEventType() const = 0;
 		virtual const char* getName() const = 0;
 		virtual int getCategoryFlags() const = 0;
-		virtual std::string toString() const { return getName(); }
+		virtual std::string toString() const { return std::string(getName()); }
 
 		inline bool IsInCategory(EventCategory category) {
 			return getCategoryFlags() & category;

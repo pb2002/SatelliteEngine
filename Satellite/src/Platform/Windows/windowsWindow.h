@@ -3,6 +3,7 @@
 #include "Satellite/window.h"
 
 #include <GLFW/glfw3.h>
+
 namespace Satellite {
 	class WindowsWindow : public Window {
 	public:

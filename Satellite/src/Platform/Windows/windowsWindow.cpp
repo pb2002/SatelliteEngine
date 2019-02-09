@@ -5,7 +5,7 @@
 #include "Satellite/events/keyEvent.h"
 #include "Satellite/events/mouseEvent.h"
 
-
+#include <glad/glad.h>
 
 namespace Satellite {
 	
@@ -58,6 +58,10 @@ namespace Satellite {
 		}
 		
 		glfwMakeContextCurrent(m_Window);
+		
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		SAT_CORE_ASSERT(status, "(at {0}) Failed to initialize glad.", __FUNCTION__);
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		setVSync(true);
 

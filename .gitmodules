@@ -7,3 +7,6 @@
 [submodule "Sandbox/vendor/spdlog"]
 	path = Sandbox/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Satellite/vendor/imgui"]
+	path = Satellite/vendor/imgui
+	url = https://github.com/TheCherno/imgui

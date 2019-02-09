@@ -6,8 +6,8 @@ public:
 	void onUpdate() override {
 		SAT_INFO(__FUNCTION__);
 	}
-	void onEvent(Satellite::Event& event) override {
-		SAT_TRACE("{0}", event);
+	void onEvent(Satellite::Event& e) override {
+		SAT_TRACE("{0}",e);
 	}
 };
 class Sandbox : public Satellite::Application {
