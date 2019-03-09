@@ -26,6 +26,9 @@ namespace Satellite {
 		inline bool isVSync() const override {
 			return m_Data.vSync;
 		}
+
+		inline virtual void* getNativeWindow() const override { return m_Window; }
+
 	private:
 		virtual void init(const WindowProperties& props);
 		virtual void shutdown();

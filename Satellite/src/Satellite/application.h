@@ -24,11 +24,15 @@ namespace Satellite {
 		void PushLayer(Layer* layer); 
 		void PushOverlay(Layer* overlay);
 		// ------------------------------
+		inline static Application& get() { return *s_Instance; }
+		inline Window& getWindow() { return *m_Window; }
 	private:
 		// Event dispatch functions ------------
 		bool onWindowCLose(WindowCloseEvent &e);
+		static Application* s_Instance;
 		// -------------------------------------
 	private:
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 		LayerStack m_LayerStack;

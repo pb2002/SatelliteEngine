@@ -1,4 +1,7 @@
 #pragma once
+
+#pragma warning(disable: 4251)
+
 #ifdef SAT_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif

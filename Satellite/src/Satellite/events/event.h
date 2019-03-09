@@ -15,7 +15,7 @@ namespace Satellite {
 		none = 0,
 		windowClose, windowResize, windowFocus, windowLostFocus, windowMoved,
 		appTick, appUpdate, appRender,
-		keyDown, keyUp,
+		keyDown, keyUp, keyTyped,
 		mouseButtonDown, mouseButtonUp, mouseMoved, mouseScrolled
 	};
 	// ----------------------------------------------------------------------

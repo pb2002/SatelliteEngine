@@ -20,6 +20,6 @@
 	#define SAT_CORE_ASSERT(x, ...)
 #endif
 
-
+#define SAT_BIND_EVENT_FN(x) std::bind(&x, this,std::placeholders::_1)
 // returns value where bit x = 1 and all others are 0.
 #define BIT(x) (1 << x)

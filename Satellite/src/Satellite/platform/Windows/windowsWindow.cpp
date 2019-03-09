@@ -1,6 +1,7 @@
 #include "satpch.h"
 #include "windowsWindow.h"
 
+
 #include "Satellite/events/appEvent.h"
 #include "Satellite/events/keyEvent.h"
 #include "Satellite/events/mouseEvent.h"
@@ -36,6 +37,7 @@ namespace Satellite {
 		glfwSwapInterval(enabled ? 1 : 0);
 		m_Data.vSync = enabled;
 	}
+
 	// GLFW WINDOW INIT
 	// ----------------------------------------------------------
 	void WindowsWindow::init(const WindowProperties & props) {
@@ -78,6 +80,13 @@ namespace Satellite {
 			WindowCloseEvent event;
 			data.eventCallback(event);
 		});
+		
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode) {
+			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+			KeyTypedEvent event(keycode);
+			data.eventCallback(event);
+		});
+
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 			
@@ -127,8 +136,9 @@ namespace Satellite {
 		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xpos, double ypos) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
-			MouseMovedEvent event(xpos,ypos);
+			MouseMovedEvent event((float)xpos, (float)ypos);
 			data.eventCallback(event);
+			
 		});
 	}
 	// ----------------------------------------------------------

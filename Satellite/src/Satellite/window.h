@@ -44,6 +44,9 @@ namespace Satellite {
 		virtual void setEventCallback(const EventCallbackFn& callback) = 0;
 		virtual void setVSync(bool enabled) = 0; // enable or disable VSync
 		virtual bool isVSync() const = 0; // check VSync enable state.
+
+		inline virtual void* getNativeWindow() const = 0;
+
 		static Window* create(const WindowProperties& props = WindowProperties());
 	};
 }
